@@ -5,16 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vehicle on Rent — Car & Bike Hire</title>
   <meta name="description" content="Simple, responsive vehicle rental landing page with booking form — HTML/CSS/JS single file." />
-  <style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
     :root{
       --bg:#f6f7fb;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --accent:#0b72ff;
-      --accent-2:#06b6d4;
+      --card:#d0c1c1;
+      --muted:#12120b;
+      --accent:#465a75;
+      --accent-2:#477279;
       --radius:14px;
       --shadow: 0 6px 20px rgba(11,114,255,0.08), 0 1px 3px rgba(2,6,23,0.04);
       font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    .logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -70,21 +78,24 @@
   <div class="container">
     <!-- HEADER -->
     <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true">VOR</div>
-        <div>
-          <h1>VEHICLE ON RENT</h1>
-          <div style="font-size:12px;color:var(--muted)">Best rates • Trusted service</div>
-        </div>
-      </div>
+  <div class="brand">
+    <!-- ✅ Logo image -->
+    <img src="c:\Users\Asus\Downloads\logo.png" alt="VOR Logo" class="logo-img">
 
-      <nav aria-label="main navigation">
-        <a href="#vehicles">Vehicles</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#contact">Contact</a>
-        <button class="btn" id="quickBook" type="button">Book Now</button>
-      </nav>
-    </header>
+    <div>
+      <h1>VEHICLE ON RENT</h1>
+      <div style="font-size:12px;color:var(--muted)">Best rates • Trusted service</div>
+    </div>
+  </div>
+
+  <nav aria-label="main navigation">
+    <a href="#vehicles">Vehicles</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#contact">Contact</a>
+    <button class="btn" id="quickBook" type="button">Book Now</button>
+  </nav>
+</header>
+
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
@@ -224,21 +235,34 @@
           <button class="btn" id="sendContact" type="button">Send</button>
         </form>
 
-        <!-- Office Info -->
-        <div style="flex:1;min-width:280px;padding:16px;background:var(--card);border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px">
-          <strong>Office & Contact Info</strong>
-          <p>📍 Location: Bhawarkua, Indore, MP</p>
-          <p>📞 Call/WhatsApp: 8889304304</p>
-          <p>✉ Email: vor.rentals@gmail.com</p>
-          <p>🌐 Social Media:
-            <a href="https://www.facebook.com/share/161BnFBAem/" target="_blank" style="color:var(--accent)">Facebook</a> |
+   <!-- Office Info -->
+<div style="flex:1;min-width:280px;padding:16px;background:var(--card);border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px">
+  <strong>Office & Contact Info</strong>
+  <p>📍 Location: Bhawarkua, Indore, MP</p>
+  <p>📞 Call/WhatsApp: 8889304304</p>
+  <p>✉ Email: vor.rentals@gmail.com</p>
+  <p>🌐 Social Media:</p>
+  <div style="display:flex;gap:14px;align-items:center;font-size:24px">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/161BnFBAem/" target="_blank" style="color:#1877f2">
+      <i class="fab fa-facebook-square"></i>
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/vor_vehiclesonrent?igsh=MTVzeHoxamlxenJhcg==" target="_blank" style="color:#e4405f">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@VORVehiclesonrent" target="_blank" style="color:#ff0000">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/918889304304" target="_blank" style="color:#25D366">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</div>
 
 
-            <a href="https://www.instagram.com/vor_vehiclesonrent?igsh=MTVzeHoxamlxenJhcg==" target="_blank" style="color:var(--accent)">Instagram</a>
-          </p>
-        </div>
-      </div>
-    </section>
 
     <footer>© <span id="year"></span> Vehicle on Rent — All rights reserved</footer>
   </div>
